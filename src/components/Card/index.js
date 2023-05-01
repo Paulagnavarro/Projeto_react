@@ -51,7 +51,7 @@ export default function Card() {
         <div className="container text-center">
 
         <div className="container my-4">
-      <div className="row">
+      <div className="row" style={{marginBottom: '20px'}}>
         <div className="col-sm-6">
           <input
             type="text"
@@ -74,8 +74,6 @@ export default function Card() {
           </select>
         </div>
       </div>
-
-
 
         <div className="row">
         {filteredFilmes.map((filme, index) =>
