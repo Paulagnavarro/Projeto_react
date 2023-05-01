@@ -116,6 +116,7 @@ export default function Cadastro() {
             <label style={{ marginBottom: '15px' }}>
                 CVC:
                 <input type='password' value={cvc} onChange={handleCvcChange}  maxLength={3} />
+
             </label>
              </form>
             </div>
