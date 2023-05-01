@@ -10,6 +10,7 @@ export default function Cadastro() {
     const [numeroCartao, setNumeroCartao] = useState('');
     const [cvc, setCvc] = useState('');
     const [botaoClicado, setBotaoClicado] = useState(null);
+    const [mensagem, setMensagem] = useState(null);
 
     function handleNomeChange(event) {
         setNome(event.target.value);
@@ -36,6 +37,8 @@ export default function Cadastro() {
 
     function handleSubmit(event) {
         event.preventDefault();
+        if (nome && telefone && endereco && nomeCartao && numeroCartao && cvc && botaoClicado) {
+            setMensagem("Assinatura realizada com sucesso!");
         console.log(`Nome: ${nome}, 
         Telefone: ${telefone}, 
         Endereco: ${endereco}, 
@@ -44,6 +47,9 @@ export default function Cadastro() {
         CVC: ${cvc}, 
         Plano: ${botaoClicado}`
         );
+        } else {
+            setMensagem("Por favor, preencha todos os campos antes de assinar.");
+        }
     }
 
     function handleFreeClick(event) {
@@ -109,16 +115,17 @@ export default function Cadastro() {
             <br/>
             <label style={{ marginBottom: '15px' }}>
                 CVC:
-                <input type="text" value={cvc} onChange={handleCvcChange}  maxLength={3} />
+                <input type='password' value={cvc} onChange={handleCvcChange}  maxLength={3} />
             </label>
              </form>
             </div>
             </div>
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: '15px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column',justifyContent: 'center', alignItems: 'center', marginTop: '15px' }}>
             <button type="submit"
                 className='btn btn-primary'  onClick={handleSubmit}>
                 Assinar
             </button>
+            {mensagem && <div className="mensagem">{mensagem}</div>}
             </div>
         </div>
     );

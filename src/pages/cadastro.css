@@ -5,3 +5,7 @@ input {
     border-radius: 5px;
     border: 1px solid #ccc;
   }
+
+  .mensagem{
+    font-size: 20px;
+  }
