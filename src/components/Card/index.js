@@ -84,7 +84,7 @@ export default function Card() {
                         <h5 className="card-title">{filme.titulo}<div>{filme.ano}</div> </h5>
                         <div><p>{filme.nota}</p></div>
                         
-                        <a href={`/detalhes/:filme${filme.titulo}`}>
+                        <a href={`/detalhes/${filme.id}`}>
                           <div className="btn btn-primary">
                           <ButtonAssistir assistido={filme.assistido}/>
                           </div>
@@ -97,4 +97,3 @@ export default function Card() {
     </div> 
   );
 }
-

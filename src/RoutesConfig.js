@@ -8,7 +8,7 @@ export default function RoutesConfig() {
     return (
     <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='detalhes/:filme' element={<Detalhes />} />
+        <Route path='detalhes/:id' element={<Detalhes />} />
         <Route path='cadastro' element={<Cadastro />} />
         <Route path='*' element={<h1>Página Não Encontrada!</h1>} />
       </Routes>
