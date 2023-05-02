@@ -1,0 +1,13 @@
+.cards-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .card-1 img {
+    margin-left: 230px;
+  }
+  
+  .card-2{
+    margin-right: 50px;
+  }
+  
