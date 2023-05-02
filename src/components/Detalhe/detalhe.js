@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Title from "../Title/index";
 import "./detalhe.css";
+import Comment from "../comment/index";
 
 function ButtonAssistir(props) {
   const { assistido } = props;
@@ -69,6 +70,7 @@ const Detalhe = (props) => {
             <div className="btn btn-primary">
               <ButtonAssistir assistido={DetalheFilme.assistido} />
             </div>
+            <Comment />
           </div>
         </div>
       )}
